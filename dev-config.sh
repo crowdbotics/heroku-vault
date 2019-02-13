@@ -1,12 +1,11 @@
-#!/bin/bash 
+#!/bin/bash
 
-set -e 
+set -e
 
 cat << EOF
 disable_mlock = true
 
-storage "postgresql" {
-  connection_url = "${DATABASE_URL:?}"
+storage "s3" {
 }
 
 listener "tcp" {
@@ -15,5 +14,3 @@ listener "tcp" {
 }
 
 EOF
-
-

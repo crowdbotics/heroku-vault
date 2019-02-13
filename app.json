@@ -1,8 +1,19 @@
 {
   "name": "vault server",
   "description": "deploy a dev vault server to heroku",
-  "repository": "https://github.com/pallavkothari/vault",
+  "repository": "https://github.com/crowdbotics/heroku-vault",
   "keywords": ["vault", "server"],
+  "env": {
+    "AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "AWS_S3_BUCKET": {
+      "required": true
+    }
+  },
   "buildpacks": [
     {
       "url": "https://github.com/iAnanich/heroku-buildpack-vault"
@@ -11,17 +22,6 @@
       "url": "https://github.com/pallavkothari/heroku-buildpack-nginx"
     }
   ],
-  "addons": [
-    {
-      "plan": "heroku-postgresql",
-      "options": {
-        "version": "9.5"
-      }
-    }
-  ],
-  "scripts": {
-    "postdeploy": "psql ${DATABASE_URL} -q -f vault-kv.sql"
-  },
   "formation": {
     "web": {
       "quantity": 1,
