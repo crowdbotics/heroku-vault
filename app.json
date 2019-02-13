@@ -5,7 +5,7 @@
   "keywords": ["vault", "server"],
   "buildpacks": [
     {
-      "url": "https://github.com/pallavkothari/heroku-buildpack-vault.git"
+      "url": "https://github.com/iAnanich/heroku-buildpack-vault"
     },
     {
       "url": "https://github.com/pallavkothari/heroku-buildpack-nginx"
@@ -25,7 +25,7 @@
   "formation": {
     "web": {
       "quantity": 1,
-      "size": "hobby"
+      "size": "free"
     }
   }
 }
