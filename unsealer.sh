@@ -22,7 +22,7 @@ do
   echo "status = ${STATUS}"
   if [ ${STATUS} -eq 404 ]; then
     echo "listener is up"
-	curl -X PUT -d "$(generate_post_data)" http://127.0.0.1:${PORT:?}/v1/sys/unseal
+	curl -X PUT -d "$(generate_post_data)" http://127.0.0.1:8080/v1/sys/unseal
 	echo "done unsealing"
     break
   else
