@@ -16,10 +16,10 @@
   },
   "buildpacks": [
     {
-      "url": "https://github.com/iAnanich/heroku-buildpack-vault"
+      "url": "https://github.com/crowdbotics/heroku-buildpack-vault#1.7.1"
     },
     {
-      "url": "https://github.com/pallavkothari/heroku-buildpack-nginx"
+      "url": "https://github.com/heroku/heroku-buildpack-nginx"
     }
   ],
   "formation": {
