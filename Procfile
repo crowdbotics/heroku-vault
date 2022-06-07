@@ -1,1 +1,1 @@
-web: bin/start-nginx && bash start.sh
+web: bin/start-nginx bash ./start.sh
