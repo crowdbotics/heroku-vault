@@ -21,6 +21,9 @@ vault write secret/hello value=world
 vault read secret/hello
 ```
 
+### To automatically unseal set 
+
+`export VAULT_UNSEAL_KEY=<unseal-key-here>`
    
 
 #### Useful Links
